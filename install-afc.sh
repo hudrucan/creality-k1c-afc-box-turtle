@@ -159,7 +159,7 @@ done
 # Basic checks
 
 clear
-check_root
+# check_root
 check_for_hh
 
 # Uninstall procedure

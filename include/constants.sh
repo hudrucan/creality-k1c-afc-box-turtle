@@ -6,11 +6,11 @@
 # This file may be distributed under the terms of the GNU GPLv3 license.
 
 # Paths
-KLIPPER_PATH="${HOME}/klipper"
-MOONRAKER_PATH="${HOME}/printer_data/config"
-AFC_PATH="${HOME}/AFC-Klipper-Add-On"
-PRINTER_CONFIG_PATH="${HOME}/printer_data/config"
-AFC_CONFIG_PATH="${PRINTER_CONFIG_PATH}/AFC"
+KLIPPER_PATH="/usr/data/klipper"
+MOONRAKER_PATH="/usr/data/printer_data/config"
+AFC_PATH="/usr/data/box_turtle"
+PRINTER_CONFIG_PATH="/usr/data/printer_data/config"
+AFC_CONFIG_PATH="${PRINTER_CONFIG_PATH}/box_turtle"
 
 # Interface specific paths
 MAINSAIL_SRC="$AFC_PATH/software/mainsail-afc.zip"
@@ -20,7 +20,7 @@ FLUIDD_DST="$HOME/fluidd"
 
 # Variables
 KLIPPER_SERVICE=klipper
-GITREPO="https://github.com/ArmoredTurtle/AFC-Klipper-Add-On.git"
+GITREPO="https://github.com/hudrucan/creality-k1c-afc-box-turtle.git"
 PRIOR_INSTALLATION=False
 UPDATE_CONFIG=False
 AUTO_UPDATE_CONFIG=False
@@ -40,7 +40,7 @@ BACKUP_DATE=$(date +%Y%m%d%H%M%S)
 MOONRAKER_UPDATE_CONFIG="""
 [update_manager afc-software]
 type: git_repo
-path: ~/AFC-Klipper-Add-On
+path: /usr/data/box_turtle
 origin: $GITREPO
 managed_services: klipper moonraker
 primary_branch: $BRANCH
